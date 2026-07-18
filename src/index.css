@@ -1,0 +1,34 @@
+body, #root {
+  background-color: #302e2e;
+  color: rgb(255, 254, 232);
+  width: 100%;
+  height: 100vh;
+}
+
+.home {
+  height: 100%;
+}
+
+.title {
+  margin: auto;
+  width: fit-content;
+  padding-top: 2rem;
+}
+
+.btn-container {
+  height: 88%;
+}
+
+.button-layout {
+  width: fit-content;
+  border: 3px solid #efcb13;
+}
+
+.btn-ui {
+  background-color: #4e4a4a;
+  color:rgb(255, 254, 232);
+  width: 12em;
+  height: 2.5em;
+  margin: 8px 6px;
+  font-size: 1.1em;
+}
