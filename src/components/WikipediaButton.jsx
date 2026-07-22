@@ -1,9 +1,10 @@
 import { useState } from "react"
 
-export default function WikipediaButton() {
+export default function WikipediaButton({ handleLoading }) {
 	const [wikiText, setWikiText] = useState("")
 
 	const fetchRandomPage = async (event) => {
+		handleLoading(true)
 		let response = await fetch("https://en.wikipedia.org/api/rest_v1/page/random/summary")
 		let data = await response.json()
 
@@ -12,6 +13,7 @@ export default function WikipediaButton() {
 		data = await response.json()
 		const wikiText = data["query"]["pages"][0]["revisions"][0]["slots"]["main"]["content"]
 		setWikiText(wikiText)
+		handleLoading(false)
 	}
 
 	return (

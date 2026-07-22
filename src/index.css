@@ -32,3 +32,7 @@ body, #root {
   margin: 8px 6px;
   font-size: 1.1em;
 }
+
+.spinner {
+  margin: 3.75em 6em;
+}
