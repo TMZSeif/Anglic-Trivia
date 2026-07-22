@@ -1,7 +1,8 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 
 export default function WikipediaButton({ handleLoading }) {
-	const [wikiText, setWikiText] = useState("")
+	const navigate = useNavigate()
 
 	const fetchRandomPage = async (event) => {
 		handleLoading(true)
@@ -12,8 +13,8 @@ export default function WikipediaButton({ handleLoading }) {
 		response = await fetch(`https://en.wikipedia.org/w/api.php?action=query&prop=revisions&titles=${title}&rvslots=*&rvprop=content&formatversion=2&format=json&origin=*`)
 		data = await response.json()
 		const wikiText = data["query"]["pages"][0]["revisions"][0]["slots"]["main"]["content"]
-		setWikiText(wikiText)
 		handleLoading(false)
+		navigate("/wikipedia", { state: {wikitext: wikiText, title: title}})
 	}
 
 	return (

@@ -10,8 +10,8 @@ export default function TriviaButtons() {
 
 	return (
 		<div className="d-flex flex-column button-layout">
-			{loading ? <div class="spinner-border spinner text-info" role="status">
-				<span class="visually-hidden">Loading...</span>
+			{loading ? <div className="spinner-border spinner text-info" role="status">
+				<span className="visually-hidden">Loading...</span>
 			</div> : <>
 				<WikipediaButton handleLoading={handleLoading} />
 				<button type="button" className="btn-ui">Give me a word</button>
