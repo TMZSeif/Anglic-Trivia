@@ -1,9 +1,10 @@
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import DOMPurify from 'dompurify'
 
 export default function WikipediaPage() {
 	const location = useLocation()
+	const navigate = useNavigate()
 	const wikitext = location.state?.wikitext
 	const titleLink = location.state?.title
 	const [htmltext, setHtmltext] = useState("")
@@ -30,12 +31,17 @@ export default function WikipediaPage() {
 		parseText()
 	}, [])
 
+	const goBack = (event) => {
+		navigate("/")
+	}
+
 
 	return (
 		<div className='mw-page-container'>
 			<div className='my-content-container'>
 				<main id='content' className='mw-body'>
 					<header className='mw-body-header vector-page-titlebar no-font-mode-scale'>
+						<button type='button' onClick={goBack} role='button' className='btn btn-dark'>&larr;</button>
 						<h1 id='firstHeading' className='firstHeading mw-first-heading'>
 							<span lang='en' dir='ltr'>
 								<span className='mw-page-title-main'>{title.replace("_", " ")}</span>
