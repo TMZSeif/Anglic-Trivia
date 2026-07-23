@@ -5,27 +5,11 @@ import DOMPurify from 'dompurify'
 export default function WikipediaPage() {
 	const location = useLocation()
 	const navigate = useNavigate()
-	const wikitext = location.state?.wikitext
-	const titleLink = location.state?.title
-	const [htmltext, setHtmltext] = useState("")
-	const [title, setTitle] = useState(titleLink)
+	const [htmltext, setHtmltext] = useState(location.state?.htmltext)
+	const [title, setTitle] = useState(location.state?.title)
 
 	useEffect(() => {
 		async function parseText() {
-			const response = await fetch(`https://en.wikipedia.org/w/api.php?action=parse&title=${titleLink}&contentmodel=wikitext&disableeditsection=true&disablelimitreport=true&format=json&origin=*`, {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/x-www-form-urlencoded"
-				},
-				body: new URLSearchParams({
-					text: wikitext
-				})
-			})
-			const data = await response.json()
-			let htmltext = data["parse"]["text"]["*"].replaceAll('\\"', "'")
-			htmltext = DOMPurify.sanitize(htmltext)
-			setHtmltext(htmltext)
-
 			const parser = new DOMParser()
 			const doc = parser.parseFromString(htmltext, 'text/html')
 			const walker = document.createTreeWalker(doc.body, NodeFilter.SHOW_TEXT, (node) => {
