@@ -1,0 +1,515 @@
+.mw-page-container {
+	display: block;
+	unicode-bidi: isolate;
+	font-family: sans-serif;
+
+	background-color: #fff;
+	color: #202122;
+
+	min-width: auto;
+	max-width: 99.75rem;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 0;
+	margin: 0 auto;
+	padding-top: 0.05px;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+.mw-body {
+	direction: ltr;
+}
+
+.vector-page-titlebar {
+	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	box-shadow: none;
+}
+
+.vector-page-titlebar::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #a2a9b1;
+}
+
+.vector-page-titlebar .firstHeading {
+	flex-grow: 1;
+	padding: 0;
+	border: 0;
+}
+
+.mw-body .firstHeading {
+	word-break: break-word;
+	margin-bottom: 0;
+}
+
+.mw-body .mw-heading1 h1,
+.mw-body .mw-heading2 h2,
+.mw-body .mw-heading3 h3,
+.mw-body .mw-heading4 h4,
+.mw-body .mw-heading5 h5,
+.mw-body .mw-heading6 h6 {
+	margin-top: 0;
+	font-size: inherit;
+}
+
+.mw-body h1,
+.mw-body .mw-heading1,
+.mw-body-content h1,
+.mw-body-content .mw-heading1 {
+	font-size: 1.8em;
+}
+
+.mw-body h1,
+.mw-body .mw-heading1,
+.mw-body-content h1,
+.mw-body-content .mw-heading1,
+.mw-body-content h2,
+.mw-body-content .mw-heading2 {
+	font-family: 'Linux Libertine', 'Georgia', 'Times', 'Source Serif 4', serif;
+	line-height: 1.375;
+}
+
+.mw-body h1,
+.mw-body .mw-heading1 {
+	font-weight: normal;
+}
+
+.mw-body h1,
+.mw-body .mw-heading1,
+.mw-body .mw-heading2,
+.mw-body h2 {
+	margin-bottom: 0.6em;
+	border-bottom: 1px solid #a2a9b1;
+}
+
+.mw-body .mw-heading h1,
+.mw-body .mw-heading h2,
+.mw-body .mw-heading h3,
+.mw-body .mw-heading h4,
+.mw-body .mw-heading h5,
+.mw-body .mw-heading h6 {
+	scroll-margin-top: 75px;
+
+	display: inline;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	color: inherit;
+	font: inherit;
+}
+
+.mw-body h1,
+.mw-body h2,
+.mw-body h3,
+.mw-body h4,
+.mw-body h5,
+.mw-body h6,
+.mw-body .mw-heading {
+	color: #101418;
+	margin: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.17em;
+	display: flow-root;
+	word-break: break-word;
+}
+
+.vector-body {
+	line-height: 1.625;
+	position: relative;
+	z-index: 0;
+}
+
+.vector-body-before-content {
+	overflow: hidden;
+}
+
+#siteSub {
+	display: block;
+	font-size: 0.875rem;
+	margin-top: 8px;
+}
+
+#mw-content-text {
+	margin-top: 16px;
+}
+
+.mw-parser-output {
+	counter-reset: mw-numbered-ext-link;
+}
+
+.mw-hide-empty-elt .mw-parser-output:not(.mw-show-empty-elt) .mw-empty-elt {
+	display: none;
+}
+
+.infobox {
+	background-color: #f8f9fa;
+	border: 1px solid #a2a9b1;
+	color: black;
+	padding: 0.2em;
+	font-size: 88%;
+	line-height: 1.5em;
+	border-spacing: 3px;
+	margin: 0.5em 0;
+	caption-side: top;
+	border-collapse: separate;
+}
+
+.infobox .infobox-above,
+.infobox .infobox-title,
+.infobox caption {
+	font-size: 125%;
+	font-weight: bold;
+	text-align: center;
+}
+
+.infobox-title,
+.infobox caption {
+	padding: 0.2em;
+}
+
+.infobox .infobox-header,
+.infobox .infobox-subheader,
+.infobox .infobox-image,
+.infobox .infobox-full-data,
+.infobox .infobox-below {
+	text-align: center;
+}
+
+.infobox-label,
+.infobox-data,
+.infobox th,
+.infobox td {
+	text-align: left;
+}
+
+.infobox-header,
+.infobox-label,
+.infobox-above,
+.infobox-full-data,
+.infobox-data,
+.infobox-below,
+.infobox-subheader,
+.infobox-image,
+.infobox-navbar,
+.infobox th,
+.infobox td {
+	vertical-align: top;
+}
+
+.mw-parser-output a {
+	word-break: break-word;
+}
+
+a:where(:not([role='button'])) {
+	color: #36c;
+	border-radius: 2px;
+	text-decoration: none;
+}
+
+a {
+	color: #36c;
+	text-decoration: none;
+	background: none;
+}
+
+.mw-parser-output .mw-default-size img[width="250"],
+.mw-parser-output .mw-default-size img.mw-file-upright {
+	height: auto;
+	width: calc(250px * 1);
+}
+
+img {
+	border: 0;
+	vertical-align: middle;
+}
+
+.mw-parser-output .infobox-hiddenrow,
+body.skin--responsive.skin--responsive .mw-parser-output .infobox .infobox-hiddenrow {
+	display: none;
+}
+
+.preview-warning {
+	display: none;
+}
+
+.mw-body p {
+	margin: 0.5em 0 1em 0
+}
+
+.mw-body .mw-heading2,
+.mw-body h2,
+.mw-body .mw-heading3,
+.mw-body h3,
+.mw-body .mw-heading4,
+.mw-body h4,
+.mw-body .mw-heading5,
+.mw-body h5,
+.mw-body .mw-heading6,
+.mw-body h6 {
+	margin: 0.25em 0 0.25em 0;
+}
+
+.mw-body .mw-heading2,
+.mw-body h2 {
+	font-size: 1.5em;
+}
+
+.mw-body .mw-heading3,
+.mw-body h3,
+.mw-body .mw-heading4,
+.mw-body h4 {
+	font-weight: bold;
+}
+
+.mw-body .mw-heading3,
+.mw-body h3 {
+	font-size: 1.2em;
+}
+
+.mw-body .mw-heading3,
+.mw-body h3,
+.mw-body .mw-heading4,
+.mw-body h4,
+.mw-body .mw-heading5,
+.mw-body h5,
+.mw-body .mw-heading6,
+.mw-body h6 {
+	padding-bottom: 0;
+	line-height: 1.6;
+}
+
+.mw-body-content sub,
+.mw-body-content sup {
+	font-size: 80%;
+	line-height: 1;
+}
+
+sup.reference {
+	white-space: nowrap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+#mw-content-text .reference a[href*='#'] * {
+	pointer-events: none;
+}
+
+.nowrap,
+.nowraplinks a {
+	white-space: nowrap;
+}
+
+figure.mw-halign-right,
+figure.mw-halign-right {
+	margin: 0.5em 0 1.3em 1.4em;
+	clear: right;
+	float: right;
+}
+
+@media (min-width: 640px) {
+
+	figure,
+	figure,
+	.thumbinner {
+		min-width: 100px;
+	}
+}
+
+figure,
+figure {
+	border: 1px solid #c8ccd1;
+	border-bottom: 0;
+	background-color: #f8f9fa;
+	color: #202122;
+
+	display: table;
+	text-align: center;
+	border-collapse: collapse;
+	line-height: 0;
+
+	margin: 0.5em 0 1.3em 1.4em;
+	clear: right;
+	float: right;
+}
+
+.mw-body-content figure>a,
+.mw-body-content figure>a {
+	border: 0;
+}
+
+figure>.mw-file-description,
+figure>.mw-file-magnify {
+	display: block;
+	position: relative;
+}
+
+body.skin--responsive .mw-parser-output figure img.mw-file-element,
+body.skin--responsive .mw-parser-output figure img.mw-file-element {
+	max-width: calc(100% - (2 * 3px) - (2 * 1px));
+}
+
+body.skin--responsive .mw-parser-output figure img.mw-file-element {
+	height: auto;
+	max-width: 100%;
+}
+
+figure> :not(figcaption) .mw-file-element:not(.mw-broken-media),
+figure> :not(figcaption) .mw-file-element:not(.mw-broken-media) {
+	background-color: #fff;
+	color: #202122;
+}
+
+figure> :not(figcaption) .mw-file-element,
+figure> :not(figcaption) .mw-file-element {
+	background-color: #fff;
+	border: 1px solid #c8ccd1;
+
+	margin: 3px;
+}
+
+figure>figcaption,
+figure>figcaption {
+	border: 1px solid #c8ccd1;
+	border-top: 0;
+	font-size: 88.40000000000001%;
+
+	display: table-caption;
+	caption-side: bottom;
+	background-color: inherit;
+	line-height: 1.4em;
+	word-break: break-word;
+	text-align: start;
+	padding: 0 6px 6px 6px;
+}
+
+.mw-body ul {
+	list-style-type: disc;
+
+	margin: 0.3em 0 0 1.6em;
+	margin-inline-start: 1.6em;
+	margin-inline-end: 0;
+	padding: 0;
+}
+
+.mw-body li {
+	margin-bottom: 0.1em;
+}
+
+.wikitable {
+	background-color: #f8f9fa;
+	color: #202122;
+	margin: 1em 0;
+	border: 1px solid #a2a9b1;
+	border-collapse: collapse;
+}
+
+.wikitable>tr>th,
+.wikitable>*>tr>th {
+	background-color: #eaecf0;
+	color: #202122;
+	text-align: center;
+}
+
+.wikitable>tr>th,
+.wikitable>tr>td,
+.wikitable>*>tr>th,
+.wikitable>*>tr>td {
+	border: 1px solid #a2a9b1;
+	padding: 0.2em 0.4em;
+}
+
+abbr[title] {
+	cursor: help;
+	text-decoration: underline dotted;
+}
+
+a:where(.new:not([role='button'])) {
+	color: #bf3c2c;
+}
+
+ol.references {
+	counter-reset: mw-ref-details-parent mw-references list-item;
+}
+
+.references {
+	font-size: 90%;
+	margin-bottom: 0.5em;
+}
+
+.mw-body ol {
+	margin: 0.3em 0 0 3.2em;
+	margin-inline-start: 3.2em;
+	margin-inline-end: 0;
+	padding: 0;
+	list-style-image: none;
+}
+
+ol.references>li {
+	counter-reset: mw-ref-details-child;
+	counter-increment: mw-ref-details-parent mw-references;
+}
+
+ol.mw-references>li {
+	counter-increment: mw-ref-details-parent mw-references;
+}
+
+.mw-cite-backlink,
+.cite-accessibility-label {
+	user-select: none;
+}
+
+x-thereisnoelementwiththisname[rel='mw:referencedBy']::before,
+span.mw-linkback-text {
+	display: none;
+}
+
+.mw-parser-output .references[data-mw-group=lower-alpha] {
+	list-style-type: lower-alpha;
+}
+
+span[rel="mw:referencedBy"] {
+	counter-reset: mw-ref-linkback 0;
+}
+
+.cite-accessibility-label {
+	top: -99999px;
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	padding: 0 !important;
+	border: 0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
+.vector-feature-limited-width-clientpref-1 .mw-references-columns,
+.skin-minerva .mw-references-columns {
+	column-width: 27em;
+}
+
+.mw-references-columns {
+	column-width: 30em;
+	margin-top: 0.3em;
+}
+
+.mw-parser-output .mw-references-columns .references {
+	margin-top: 0;
+}
+
+
+.mw-body #bodyContent,
+.mw-body-header {
+	grid-area: content;
+	max-width: 1000px;
+	margin: auto;
+}
