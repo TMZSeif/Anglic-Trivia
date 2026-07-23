@@ -8865,3 +8865,5 @@ const wordbook = {
 	"being used on": "being set on",
 	"tendinitis": "sinewsickness",
 };
+
+export default wordbook;

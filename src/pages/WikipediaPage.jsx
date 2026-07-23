@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import DOMPurify from 'dompurify'
+import translate from '../anglish/script'
 
 export default function WikipediaPage() {
 	const location = useLocation()
@@ -23,7 +24,11 @@ export default function WikipediaPage() {
 
 			while (walker.nextNode()) {
 				console.log(walker.currentNode.data)
+				if (/[a-zA-Z]/.test(walker.currentNode.data)) {
+					walker.currentNode.data = translate(walker.currentNode.data)
+				}
 			}
+			setHtmltext(doc.getElementsByClassName("mw-content-ltr")[0].outerHTML)
 		}
 		parseText()
 	}, [])

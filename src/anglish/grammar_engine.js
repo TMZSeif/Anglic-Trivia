@@ -1,6 +1,7 @@
 // grammar_engine.js
+import wordbook from "./wordbook";
 
-function singulariseThenPluralise(word) {
+export function singulariseThenPluralise(word) {
     let base;
 
     if (word.endsWith('ies')) {
@@ -21,7 +22,7 @@ function singulariseThenPluralise(word) {
 }
 
 
-function pluralise(word) {
+export function pluralise(word) {
     if (word.endsWith('y')) {
         return word.slice(0, -1) + 'ies';
     } else if (!word.endsWith('s')) {
@@ -31,7 +32,7 @@ function pluralise(word) {
 }
 
 
-function presentContinuous(word) {
+export function presentContinuous(word) {
     if (!word.endsWith('ing')) return undefined;
 
     let base = word.slice(0, -3);
@@ -49,7 +50,7 @@ function presentContinuous(word) {
 }
 
 
-function toPastTense(word) {
+export function toPastTense(word) {
     if (word.endsWith('ed')) return undefined;
 
     if (word.endsWith('y') && word.length > 1 && !isVowel(word[word.length - 2])) {
@@ -64,7 +65,7 @@ function toPastTense(word) {
 }
 
 
-function toPresentTenseThenPastTense(word) {
+export function toPresentTenseThenPastTense(word) {
     const originalWord = word;
 
     if (!word.endsWith('ed')) return undefined;
@@ -82,6 +83,6 @@ function toPresentTenseThenPastTense(word) {
 
 
 // helper
-function isVowel(ch) {
+export function isVowel(ch) {
     return 'aeiou'.includes(ch.toLowerCase());
 }
