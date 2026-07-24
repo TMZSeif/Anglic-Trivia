@@ -1,5 +1,6 @@
 import { useState } from "react"
 import WikipediaButton from "./WikipediaButton"
+import MariamWebsterButton from "./MariamWebsterButton"
 
 export default function TriviaButtons() {
 	const [loading, setLoading] = useState(false)
@@ -14,7 +15,7 @@ export default function TriviaButtons() {
 				<span className="visually-hidden">Loading...</span>
 			</div> : <>
 				<WikipediaButton handleLoading={handleLoading} />
-				<button type="button" className="btn-ui">Give me a word</button>
+				<MariamWebsterButton handleLoading={handleLoading} />
 				<button type="button" className="btn-ui">Atrocities</button></>
 			}
 		</div>
