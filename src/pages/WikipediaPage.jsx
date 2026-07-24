@@ -23,9 +23,14 @@ export default function WikipediaPage() {
 			})
 
 			while (walker.nextNode()) {
-				console.log(walker.currentNode.data)
 				if (/[a-zA-Z]/.test(walker.currentNode.data)) {
 					walker.currentNode.data = translate(walker.currentNode.data)
+				}
+				if (walker.currentNode.parentElement.tagName === "A") {
+					console.log(walker.currentNode.parentElement)
+					if (walker.currentNode.parentElement.href.includes("/wiki/")) {
+						walker.currentNode.parentElement.href = "https://wikipedia.com" + walker.currentNode.parentElement.getAttribute("href")
+					}
 				}
 			}
 			setHtmltext(doc.getElementsByClassName("mw-content-ltr")[0].outerHTML)
