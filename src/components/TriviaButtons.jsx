@@ -14,9 +14,7 @@ export default function TriviaButtons() {
 			{loading ? <div className="spinner-border spinner text-info" role="status">
 				<span className="visually-hidden">Loading...</span>
 			</div> : <>
-				<WikipediaButton handleLoading={handleLoading} />
-				<MariamWebsterButton handleLoading={handleLoading} />
-				<button type="button" className="btn-ui">Atrocities</button></>
+				<WikipediaButton handleLoading={handleLoading} /></>
 			}
 		</div>
 	)
