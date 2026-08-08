@@ -1,6 +1,5 @@
 import { useState } from "react"
 import WikipediaButton from "./WikipediaButton"
-import MariamWebsterButton from "./MariamWebsterButton"
 
 export default function TriviaButtons() {
 	const [loading, setLoading] = useState(false)
